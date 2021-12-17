@@ -27,8 +27,8 @@ public class HelloRestController {
 		return "Hello from BridgeLabz";
 	}
 	 @RequestMapping(value={"/query"}, method=RequestMethod.GET)
-	    public String sayHello(@RequestParam(value="name") String name) {
-	        return "Hello" + name + "From Bridgelabz";
+	    public String sayHello(@RequestParam(value="name") String name,@RequestParam(value="lastName")String lastName) {
+	        return "Hello " + name + lastName + " From Bridgelabz";
 	    }
 	  @GetMapping("/param/{name}")
 	    public String sayHelloParam(@PathVariable String name) {
